@@ -10,11 +10,11 @@
 
 ## 脆弱性の報告
 
-脆弱性を発見した場合は[GitHub Security Advisories](../../security/advisories/new)を通じて非公開で報告してください。
+脆弱性を発見した場合は各リポジトリの **Security タブ → Report a vulnerability** から非公開で報告してください。
 修正前に公開のIssueやPRには記載しないようにお願いします。
 
 ## 不具合の報告
 
-通常の不具合は[🐛 Bug テンプレート](../../issues/new?template=bug.yml)から報告してください。
+通常の不具合は各リポジトリの **Issues タブ → 🐛 Bug** テンプレートから報告してください。
 
 > 詳細なセキュリティポリシーはOSS公開時に整備予定です。
