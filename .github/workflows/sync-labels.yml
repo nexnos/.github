@@ -1,0 +1,33 @@
+name: 🏷️ Sync Labels
+
+on:
+  workflow_call:
+    inputs:
+      delete-other-labels:
+        description: '定義にないラベルを削除するか'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Determine config file
+        id: config
+        run: |
+          URL="https://raw.githubusercontent.com/${{ github.repository }}/main/.github/labels.yml"
+          if curl -sf "$URL" > /dev/null; then
+            echo "file=$URL" >> $GITHUB_OUTPUT
+          else
+            echo "file=https://raw.githubusercontent.com/nexnos/.github/main/.github/labels.yml" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Sync labels
+        uses: EndBug/label-sync@v2
+        with:
+          config-file: ${{ steps.config.outputs.file }}
+          delete-other-labels: ${{ inputs.delete-other-labels }}
+          token: ${{ secrets.GITHUB_TOKEN }}
