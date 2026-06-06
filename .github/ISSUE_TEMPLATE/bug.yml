@@ -1,0 +1,95 @@
+name: 🐛 Bug
+description: "【不具合】予期しない動作・エラーの報告。"
+title: "[Bug] "
+labels:
+  - "type: bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug
+        予期しない動作・エラーの報告。
+
+        > 📝 このテンプレートはユーザー向けです。
+
+        > ⚠️ セキュリティに関する脆弱性は、このIssueではなく [Security Advisories](../../security/advisories/new) から報告してください。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 🎯 概要
+      description: 何が起きているか。1〜2文で簡潔に。
+      placeholder: 例）エディタが空のドキュメントを開いたときにクラッシュする。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔍 再現手順
+      description: バグを再現するための手順を記載する。
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 💡 期待する動作
+      description: 本来どのように動作するべきか。
+      placeholder: 例）空のドキュメントでもエディタが正常に表示される。
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 📋 実際の動作
+      description: 実際にどのような動作・エラーが発生しているか。
+      placeholder: 例）Cannot read properties of undefined (reading 'content') というエラーが発生しクラッシュする。
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 📦 バージョン
+      description: このリポジトリの製品バージョンを記載してください。
+      placeholder: 例）v1.1.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_versions
+    attributes:
+      label: 🔗 関連バージョン
+      description: 関連する他の製品のバージョン情報をわかる範囲で記載してください。任意。
+      value: |
+        - Nexnos本体: 
+        - テーマ: 
+        - プラグイン: 
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ 環境情報
+      description: OS・ブラウザ・Node.jsバージョンなど。
+      value: |
+        - OS: 
+        - Node.js: 
+        - ブラウザ: 
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📎 補足情報
+      description: スクリーンショット・ログ・その他補足。任意。
+    validations:
+      required: false

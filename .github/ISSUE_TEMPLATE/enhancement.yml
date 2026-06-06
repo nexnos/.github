@@ -1,0 +1,40 @@
+name: 💡 Enhancement
+description: "【改善提案】機能改善・新機能のアイデア・提案。"
+title: "[Enhancement] "
+labels:
+  - "type: enhancement"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Enhancement
+        機能改善・新機能のアイデア・提案。
+
+        > 📝 このテンプレートはユーザー向けです。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 🎯 概要
+      description: 何を改善・追加したいか。1〜2文で簡潔に。
+      placeholder: 例）エディタでMarkdownのショートカットキーに対応したい。
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 🔍 背景・理由
+      description: なぜこの改善・追加が必要か。
+      placeholder: 例）Markdownに慣れたユーザーが直感的に操作できるようにするため。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 💡 提案内容
+      description: 具体的なアイデア・実現方法の案。任意。
+      placeholder: 例）Plate の Markdown plugin を導入し、**bold** や # heading などの記法をリアルタイムで変換する。
+    validations:
+      required: false
