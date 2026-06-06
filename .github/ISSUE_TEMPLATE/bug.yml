@@ -12,7 +12,7 @@ body:
 
         > 📝 このテンプレートはユーザー向けです。
 
-        > ⚠️ セキュリティに関する脆弱性は、このIssueではなく [Security Advisories](../../security/advisories/new) から報告してください。
+        > ⚠️ セキュリティに関する脆弱性は、このIssueではなく [SECURITY.md](../../SECURITY.md) を参照して報告してください。
 
   - type: textarea
     id: summary
